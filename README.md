@@ -102,6 +102,8 @@ Constraints: maximum **20 FICs** per app or UAMI; `issuer` + `subject` must be u
 
 This is why a workspace identity's FIC is visible in the **Entra app registration blade** and nowhere in Fabric's workspace settings. Fabric created it; Entra stores and enforces it. Creation and residence are different things.
 
+Example: Workspace admins in Microsoft Fabric who want their Workspaces to interact with Azure resources in Entra such as Storage accounts needs an identity. 
+In this scenario, Workspace admins can create a workspace identity tied to the Workspace so that it can authentiate to Entra ID and recieve an access token.
 <img width="1296" height="693" alt="image" src="https://github.com/user-attachments/assets/de50d03d-0c47-4aa7-b4eb-22a2894e2440" />
 
 
