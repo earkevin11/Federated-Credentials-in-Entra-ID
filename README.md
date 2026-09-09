@@ -102,6 +102,9 @@ Constraints: maximum **20 FICs** per app or UAMI; `issuer` + `subject` must be u
 
 This is why a workspace identity's FIC is visible in the **Entra app registration blade** and nowhere in Fabric's workspace settings. Fabric created it; Entra stores and enforces it. Creation and residence are different things.
 
+<img width="1296" height="693" alt="image" src="https://github.com/user-attachments/assets/de50d03d-0c47-4aa7-b4eb-22a2894e2440" />
+
+
 ---
 
 ## 5. Terminology
@@ -130,6 +133,11 @@ Other documented behaviour: the identity gets **no workspace role by default**; 
 ### Who creates the FIC
 
 **Fabric does**, acting through a Microsoft first-party service principal named **Fabric Identity Management**, which the documentation names as the *configuration owner* of the application in Enterprise Applications.
+
+Example:
+
+<img width="1279" height="588" alt="image" src="https://github.com/user-attachments/assets/a4b12a5d-2cc4-45f1-b4d9-fd754a2d5b07" />
+
 
 **Entra ID does not create it.** Entra never authors credentials on its own initiative. Every FIC exists because something called Microsoft Graph. For a CI/CD pipeline that caller is you; for a workspace identity it is Fabric Identity Management.
 
